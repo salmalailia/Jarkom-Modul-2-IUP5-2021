@@ -18,13 +18,13 @@ EniesLobby will be used as DNS Master, Water7 will be used as DNS Slave, and Sky
 ### Answer
 
 Run the command iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 10.40.0.0/16 which is used to connect to external networks on the Foosha router
+
+![1.0]
+
+
+After that, add the command echo "nameserver 192.168.122.0" to all other nodes to set the DNS IP to /root/.bashrc to run every time the project is started with the command echo nameserver 192.168.122.1 > /etc/resolv.conf
+
 ![1.1]
-
-Then add the command iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 10.40.0.0/16 to /root/.bashrc to run every time the project is started with the command echo "iptables -t nat -A POSTROUTING -o eth0 - j MASQUERADE -s 10.40.0.0/16" >> /root/.bashrc
-![1.2]
-
-After that, add the command echo "nameserver 192.168.122.0" to all other nodes to set the DNS IP to /root/.bashrc to run every time the project is started with the command echo 'echo "nameserver 192.168.122.1" > /etc/resolv.conf' >> /root/.bashrc
-![1.3]
 
 ## no. 2
 
@@ -33,6 +33,7 @@ create the main website by accessing franky.yyy.com with the alias www.franky.yy
 ### Answer
 
 on EniesLobby run command apt-get update and apt-get install bind9 -y to install bind9
+
 ![2.1]
 
 Then edit /etc/bind/named.conf.local by adding :
@@ -46,6 +47,7 @@ bash
 ![2.2]
 
 then created a kaizoku folder in `/etc/bind`. Then copy /etc/bind/db.local to `/etc/bind/kaizoku/franky.IUP5.com`. Then configure the file to have SOA `franky.IUP5.com.`, NS `franky.IUP5.com.`, A record pointing to `IP Skypie`, and CNAME www at `franky.IUP5.com.`.
+
 ![2.3]
 ![2.4]
 
@@ -57,6 +59,7 @@ bash
          ns1 IN A 10.40.2.4 ; Skype IP
          super IN NS ns1
 
+
 ![3.1]
 
 Then add the zone to /etc/bind/named.conf.local by adding:
@@ -66,6 +69,7 @@ bash
              type masters;
              file "/etc/bind/kaizoku/super.franky.IUP5.com";
      };
+
 
 ![3.2]
 
