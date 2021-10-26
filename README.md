@@ -44,12 +44,11 @@ bash
              file "/etc/bind/kaizoku/franky.IUP5.com";
      };
 
-![2.2]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/2.2.jpeg)
 
 then created a kaizoku folder in `/etc/bind`. Then copy /etc/bind/db.local to `/etc/bind/kaizoku/franky.IUP5.com`. Then configure the file to have SOA `franky.IUP5.com.`, NS `franky.IUP5.com.`, A record pointing to `IP Skypie`, and CNAME www at `franky.IUP5.com.`.
 
-![2.3]
-![2.4]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/2.3.jpeg)
 
 ### Answer
 
@@ -60,7 +59,7 @@ bash
          super IN NS ns1
 
 
-![3.1]
+![alt text] (https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/3.1.jpeg)
 
 Then add the zone to /etc/bind/named.conf.local by adding:
 
@@ -71,11 +70,11 @@ bash
      };
 
 
-![3.2]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/3.2.jpg)
 
 Then copy /etc/bind/db.local to `/etc/bind/kaizoku/super.franky.IUP5.com`. Then configure the file to have SOA `super.franky.IUP5.com.`, NS `super.franky.IUP5.com.`, A record pointing to `IP Skypie`, and CNAME www at `super.franky.IUP5 .com.`.
 
-![3.3]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/3.3.jpeg)
 
 ## no. 4
 
@@ -91,11 +90,11 @@ bash
              file "/etc/bind/kaizoku/2.40.10.in-addr.arpa";
      };
 
-![4.1]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/4.1.jpeg)
 
 Then copy /etc/bind/db.local to `/etc/bind/kaizoku/2.40.10.in-addr.arpa`. Then configure the file to have SOA `franky.IUP5.com.`,`2.40.10.in-addr.arpa.` which has NS `franky.IUP5.com.`, and 2 which is the 4th byte of the EniesLobby IP has PTR `franky.IUP5.com.`.
 
-![4.2]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/4.2.jpeg)
 
 ## no. 5
 
@@ -103,12 +102,12 @@ In order to still be able to contact Franky if the EniesLobby server is damaged,
 
 ### Answer
 
-![5.1]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/5.1.jpeg)
 
 On Water7:
 Run the command apt-get update and apt-get install bind9 -y to install bind9
 
-![5.1]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/5.2.jpeg)
 
 Then edit /etc/bind/named.conf.local by adding :
 
@@ -119,7 +118,7 @@ bash
          file "/var/lib/bind/franky.IUP5.com";
      };
 
-![5.2]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/5.2.jpeg)
 
 At EniesLobby:
 
@@ -134,7 +133,7 @@ bash
              file "/etc/bind/kaizoku/franky.IUP5.com";
      };
 
-![5.3]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/5.3.jpeg)
 
 ## no. 6
 
@@ -144,7 +143,7 @@ After that there is a subdomain mecha.franky.yyy.com with the alias www.mecha.fr
 
 both on Water7 EniesLobby:
 edit the file /etc/bind/named.conf.options with the comment section dnssec-validation auto; and add the line `allow-query{any;};`.
-![6.1]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/6.1.jpeg)
 
 At EniesLobby:
 
@@ -154,11 +153,11 @@ bash
         ns2 IN A 10.40.2.3 ; IP Water7
         mecha IN NS ns2
 
-![6.2]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/6.2.jpeg)
 
 Make sure there is a line allow-transfer { "IP Water7"; }; in the franky.IUP5.com zone in the /etc/bind/named.conf.local file.
 
-![6.3]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/6.3.jpeg)
 
 On Water7:
 
@@ -170,12 +169,12 @@ bash
             file "/etc/bind/sunnygo/mecha.franky.IUP5.com";
     };
 
-![6.4]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/6.4.jpeg)
 
 then create a sunnygo folder in `/etc/bind`. Then copy /etc/bind/db.local to `/etc/bind/sunnygo/mecha.franky.IUP5.com`. Then configure the file to have SOA `mecha.franky.IUP5.com.`, NS `mecha.franky.IUP5.com.`, record A pointing to `IP Skypie`, and CNAME www at `mecha.franky.IUP5 .com.`.
 
-![6.5]
-![6.6]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/6.5.jpeg)
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/6.6.jpeg)
 
 ## no. 7
 
@@ -191,7 +190,7 @@ bash
          ns1 IN A 10.40.2.4 ; Skype IP
          general IN NS ns1
 
-![7.1]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/7.1.jpeg)
 
 Then add the zone to /etc/bind/named.conf.local by adding:
 
@@ -201,8 +200,8 @@ bash
              file "/etc/bind/sunnygo/general.mecha.franky.IUP5.com";
      };
 
-![7.2]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/7.2.jpeg)
 
 Then copy /etc/bind/db.local to `/etc/bind/sunnygo/general.mecha.franky.IUP5.com`. Then configure the file to have SOA `general.mecha.franky.IUP5.com.`, NS `general.mecha.franky.IUP5.com.`, record A pointing to `IP Skypie`, and CNAME www at `general .mecha.franky.IUP5.com.`.
 
-![7.3]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/7.3.jpeg)
