@@ -19,12 +19,12 @@ EniesLobby will be used as DNS Master, Water7 will be used as DNS Slave, and Sky
 
 Run the command iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 10.40.0.0/16 which is used to connect to external networks on the Foosha router
 
-![1.0]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/a95b52fdbf8c0bcde51daede3c2f565aeae56019/ss/1.0.jpeg)
 
 
 After that, add the command echo "nameserver 192.168.122.0" to all other nodes to set the DNS IP to /root/.bashrc to run every time the project is started with the command echo nameserver 192.168.122.1 > /etc/resolv.conf
 
-![1.1]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/a95b52fdbf8c0bcde51daede3c2f565aeae56019/ss/1.1.jpeg)
 
 ## no. 2
 
@@ -34,7 +34,7 @@ create the main website by accessing franky.yyy.com with the alias www.franky.yy
 
 on EniesLobby run command apt-get update and apt-get install bind9 -y to install bind9
 
-![2.1]
+![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/a95b52fdbf8c0bcde51daede3c2f565aeae56019/ss/2.1.jpg)
 
 Then edit /etc/bind/named.conf.local by adding :
 
