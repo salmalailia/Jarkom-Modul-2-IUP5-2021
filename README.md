@@ -50,6 +50,10 @@ then created a kaizoku folder in `/etc/bind`. Then copy /etc/bind/db.local to `/
 
 ![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/2.3.jpeg)
 
+## no. 3
+
+After that make a subdomain super.franky.yyy.com with alias www.super.franky.yyy.com which ruled by the DNS at EniesLobby to Skypie
+
 ### Answer
 
 Edited the /etc/bind/kaizoku/franky.IUP5.com file by adding:
