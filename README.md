@@ -211,6 +211,7 @@ Then copy /etc/bind/db.local to `/etc/bind/sunnygo/general.mecha.franky.IUP5.com
 ![alt text](https://github.com/salmalailia/Jarkom-Modul-2-IUP5-2021/blob/4d051daf409c831850002b7418f7bb1958173c8d/ss/7.3.jpeg)
 
 ##OBSTACLE
+
 ![1635594167446](https://user-images.githubusercontent.com/73702347/139532693-e117997d-edee-4c5b-a157-9280a78b7498.jpg)
 ![1635594277307](https://user-images.githubusercontent.com/73702347/139532695-3a2f1f23-0885-4705-bc42-c2b5bd14f4cf.jpg)
 ![1635594188820](https://user-images.githubusercontent.com/73702347/139532696-396effcb-8770-4e78-9f6d-e1b4d4238a19.jpg)
